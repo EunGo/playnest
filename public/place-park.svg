@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Toddler park illustration">
+  <rect width="640" height="480" fill="#F6BD60"/>
+  <path d="M0 264c79-47 145-59 200-36 90 38 152 53 245 0 70-40 135-45 195-14v266H0z" fill="#84A59D" opacity=".78"/>
+  <path d="M0 368c104-51 224-54 360-9s230 41 280-12v133H0z" fill="#F28482" opacity=".8"/>
+  <path d="M122 125c45 47 101 89 169 128" stroke="#F7EDE2" stroke-width="14" stroke-linecap="round" fill="none"/>
+  <path d="M151 189c-48 5-90 23-126 53" stroke="#F7EDE2" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <path d="M497 78c-36 70-79 126-129 169" stroke="#F7EDE2" stroke-width="14" stroke-linecap="round" fill="none"/>
+  <path d="M452 155c47-6 91 1 132 20" stroke="#F7EDE2" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <ellipse cx="220" cy="327" rx="70" ry="28" fill="#F28482"/>
+  <ellipse cx="432" cy="341" rx="84" ry="30" fill="#F7EDE2" opacity=".86"/>
+  <circle cx="318" cy="186" r="42" fill="#F5CAC3" opacity=".9"/>
+</svg>

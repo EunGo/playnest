@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Indoor playroom illustration">
+  <rect width="640" height="480" fill="#F7EDE2"/>
+  <path d="M0 120c90-70 182-84 276-42s179 34 255-28c48-39 88-54 109-46v476H0z" fill="#84A59D" opacity=".74"/>
+  <path d="M18 348c87-79 192-93 315-42s223 48 307-10v184H18z" fill="#F6BD60" opacity=".78"/>
+  <circle cx="160" cy="178" r="78" fill="#84A59D"/>
+  <circle cx="455" cy="154" r="56" fill="#F6BD60"/>
+  <path d="M93 282h164v78H93z" fill="#F28482" rx="18"/>
+  <path d="M341 242h158v118H341z" fill="#F5CAC3" rx="22"/>
+  <path d="M132 118c50 34 99 63 148 86" stroke="#F7EDE2" stroke-width="14" stroke-linecap="round" fill="none"/>
+  <path d="M393 132c42 22 80 50 113 84" stroke="#F7EDE2" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <circle cx="158" cy="321" r="18" fill="#F7EDE2"/>
+  <circle cx="461" cy="316" r="18" fill="#F7EDE2"/>
+</svg>
