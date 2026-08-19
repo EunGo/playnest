@@ -13,6 +13,7 @@ import {
   MapPin,
   Menu,
   MessageCircle,
+  Plus,
   Search,
   Settings,
   ShieldCheck,
@@ -554,6 +555,10 @@ function CommunitySection() {
             <p className="eyebrow">Forum, tips, and open chat channels</p>
             <h2>Parent conversations</h2>
           </div>
+          <button className="create-button" type="button">
+            <Plus size={16} aria-hidden="true" />
+            Create
+          </button>
         </div>
         <div className="channel-list">
           {channels.map((channel) => (

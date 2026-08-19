@@ -29,6 +29,7 @@
 .nav-item,
 .primary-button,
 .secondary-button,
+.create-button,
 .search-box,
 .map-toolbar,
 .map-toolbar span,
@@ -232,6 +233,20 @@
   width: 100%;
 }
 
+.create-button {
+  background: #f28482;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 10px 22px rgba(78, 95, 90, 0.16);
+  color: #ffffff;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-weight: 750;
+  gap: 7px;
+  min-height: 38px;
+  padding: 0 14px;
+}
+
 .secondary-button {
   background: rgba(132, 165, 157, 0.22);
   color: var(--brown);
@@ -259,6 +274,10 @@
 }
 
 .calendar-heading {
+  align-items: flex-end;
+}
+
+.section-heading:has(.create-button) {
   align-items: flex-end;
 }
 
@@ -834,6 +853,11 @@ select:focus-visible {
 
   .section-heading {
     flex-direction: column;
+  }
+
+  .section-heading:has(.create-button) {
+    align-items: flex-end;
+    flex-direction: row;
   }
 
   .calendar-heading {
