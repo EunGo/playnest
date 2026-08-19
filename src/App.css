@@ -794,9 +794,9 @@
 
 .channel-actions button {
   background: #ffffff;
-  border: 1px solid rgba(132, 165, 157, 0.42);
+  border: 0;
   border-radius: 8px;
-  color: var(--ink);
+  color: #f28482;
   cursor: pointer;
   font-size: 12px;
   font-weight: 750;
