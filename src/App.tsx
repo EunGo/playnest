@@ -370,7 +370,7 @@ function CalendarSection({
   return (
     <div className="content-grid">
       <section className="panel-column wide-panel">
-        <div className="section-heading">
+        <div className="section-heading calendar-heading">
           <div>
             <p className="eyebrow">Date calendar</p>
             <h2>This week</h2>

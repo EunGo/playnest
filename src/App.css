@@ -258,6 +258,15 @@
   margin-bottom: 24px;
 }
 
+.calendar-heading {
+  align-items: flex-end;
+}
+
+.calendar-heading .toggle-control {
+  margin-bottom: 2px;
+  white-space: nowrap;
+}
+
 .topbar h1 {
   color: var(--brown);
   font-size: 34px;
@@ -809,6 +818,11 @@ select:focus-visible {
 
   .section-heading {
     flex-direction: column;
+  }
+
+  .calendar-heading {
+    align-items: flex-end;
+    flex-direction: row;
   }
 
   .topbar h1 {
