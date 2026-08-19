@@ -567,8 +567,12 @@ function CommunitySection() {
               <div>
                 <h3>{channel.name}</h3>
                 <p>{channel.topic}</p>
+                <span>{channel.count}</span>
               </div>
-              <span>{channel.count}</span>
+              <div className="channel-actions" aria-label={`${channel.name} actions`}>
+                <button type="button">View</button>
+                <button type="button">Join</button>
+              </div>
             </article>
           ))}
         </div>

@@ -780,10 +780,29 @@
   color: var(--mauve);
 }
 
-.channel-card > span {
+.channel-card span {
   color: var(--muted);
   font-size: 13px;
   white-space: nowrap;
+}
+
+.channel-actions {
+  display: grid;
+  gap: 8px;
+  justify-items: stretch;
+}
+
+.channel-actions button {
+  background: #ffffff;
+  border: 1px solid rgba(132, 165, 157, 0.42);
+  border-radius: 8px;
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 750;
+  min-height: 32px;
+  min-width: 64px;
+  padding: 0 12px;
 }
 
 .tips-list p {
@@ -878,6 +897,19 @@ select:focus-visible {
   .match-card,
   .channel-card {
     grid-template-columns: 1fr;
+  }
+
+  .channel-card {
+    grid-template-columns: 32px minmax(0, 1fr) auto;
+  }
+
+  .channel-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .channel-actions button {
+    min-width: 56px;
+    padding: 0 10px;
   }
 
   .calendar-list {
