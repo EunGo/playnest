@@ -135,6 +135,7 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [selectedLanguage, setSelectedLanguage] = useState('English')
   const [showRegisteredOnly, setShowRegisteredOnly] = useState(false)
+  const shouldShowSearch = activeSection === 'discover' || activeSection === 'community'
 
   const filteredPlaces = useMemo(() => {
     return places.filter((place) => place.languages.includes(selectedLanguage))
@@ -221,10 +222,12 @@ function App() {
             <p className="eyebrow">Amsterdam, nearby now</p>
             <h1>{sectionTitle(activeSection)}</h1>
           </div>
-          <label className="search-box">
-            <Search size={18} aria-hidden="true" />
-            <input aria-label="Search" placeholder="Search play areas, parents, tips" />
-          </label>
+          {shouldShowSearch && (
+            <label className="search-box">
+              <Search size={18} aria-hidden="true" />
+              <input aria-label="Search" placeholder="Search play areas, parents, tips" />
+            </label>
+          )}
         </header>
 
         {activeSection === 'discover' && (
