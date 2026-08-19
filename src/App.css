@@ -629,6 +629,22 @@
   line-height: 1;
 }
 
+.load-more-row {
+  display: flex;
+  justify-content: center;
+}
+
+.load-more-row button {
+  background: #ffffff;
+  border: 1px solid rgba(132, 165, 157, 0.5);
+  border-radius: 8px;
+  color: var(--ink);
+  cursor: pointer;
+  font-weight: 750;
+  min-height: 40px;
+  padding: 0 18px;
+}
+
 .event-card button,
 .icon-button {
   align-items: center;

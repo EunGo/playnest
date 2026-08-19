@@ -427,6 +427,9 @@ function CalendarSection({
             </article>
           ))}
         </div>
+        <div className="load-more-row">
+          <button type="button">Load more</button>
+        </div>
       </section>
 
       <section className="panel-column">
