@@ -781,6 +781,15 @@ select:focus-visible {
   .discover-grid {
     grid-template-columns: 1fr;
   }
+
+  .topbar {
+    flex-direction: column;
+  }
+
+  .search-box {
+    flex-basis: auto;
+    width: 100%;
+  }
 }
 
 @media (max-width: 700px) {
@@ -794,18 +803,12 @@ select:focus-visible {
     right: 16px;
   }
 
-  .topbar,
   .section-heading {
     flex-direction: column;
   }
 
   .topbar h1 {
     font-size: 28px;
-  }
-
-  .search-box {
-    flex-basis: auto;
-    width: 100%;
   }
 
   .settings-form {
