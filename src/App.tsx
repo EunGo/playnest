@@ -109,9 +109,10 @@ const weekEvents = [
   { day: 'Wed', date: '21', title: 'Music lesson trial', time: '15:00', type: 'Lesson', signups: 6 },
   { day: 'Thu', date: '22', title: 'Parent tips circle', time: '20:30', type: 'Chat', signups: 15 },
   { day: 'Fri', date: '23', title: 'Tiny Makers group registration', time: '11:00', type: 'Group', signups: 9 },
+  { day: 'Sat', date: '24', title: 'Weekend park meetup', time: '10:30', type: 'Suggested', signups: 11 },
 ]
 
-const eventDateKeys = new Set(['2026-08-19', '2026-08-20', '2026-08-21', '2026-08-22', '2026-08-23'])
+const eventDateKeys = new Set(['2026-08-19', '2026-08-20', '2026-08-21', '2026-08-22', '2026-08-23', '2026-08-24'])
 const weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 
 const careProviders = [

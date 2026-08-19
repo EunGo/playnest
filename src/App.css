@@ -510,6 +510,10 @@
   font-weight: 800;
 }
 
+.calendar-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .place-card,
 .event-card,
 .match-card,
@@ -591,7 +595,7 @@
 
 .event-card {
   align-items: center;
-  grid-template-columns: 64px minmax(0, 1fr) 38px;
+  grid-template-columns: 58px minmax(0, 1fr) 34px;
 }
 
 .event-signups {
@@ -819,6 +823,10 @@ select:focus-visible {
   .event-card,
   .match-card,
   .channel-card {
+    grid-template-columns: 1fr;
+  }
+
+  .calendar-list {
     grid-template-columns: 1fr;
   }
 
