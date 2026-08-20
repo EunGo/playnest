@@ -865,6 +865,41 @@ select:focus-visible {
     padding: 16px;
   }
 
+  .menu-popover {
+    gap: 10px;
+    max-height: min(520px, calc(100svh - 96px));
+    overflow-y: auto;
+    padding: 10px;
+    width: min(292px, calc(100vw - 32px));
+  }
+
+  .nav-list {
+    gap: 5px;
+  }
+
+  .nav-item {
+    min-height: 34px;
+    padding: 7px 9px;
+  }
+
+  .signup-panel {
+    padding: 12px;
+  }
+
+  .signup-panel h2 {
+    font-size: 18px;
+    line-height: 1.15;
+  }
+
+  .signup-panel p {
+    margin: 6px 0 10px;
+  }
+
+  .primary-button {
+    min-height: 36px;
+    padding: 8px 12px;
+  }
+
   .app-header::after {
     left: 16px;
     right: 16px;
