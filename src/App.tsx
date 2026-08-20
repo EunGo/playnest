@@ -219,13 +219,13 @@ function App() {
           const Icon = item.icon
           return (
             <button
+              aria-label={item.label}
               className={activeSection === item.id ? 'bottom-nav-item active' : 'bottom-nav-item'}
               key={item.id}
               onClick={() => setActiveSection(item.id)}
               type="button"
             >
               <Icon size={20} aria-hidden="true" />
-              <span>{item.label}</span>
             </button>
           )
         })}

@@ -172,16 +172,19 @@
 .bottom-nav {
   align-items: stretch;
   background: #ffffff;
-  border-top: 1px solid var(--line);
-  bottom: 0;
-  box-shadow: 0 -10px 24px rgba(78, 95, 90, 0.1);
+  border: 1px solid rgba(234, 223, 211, 0.78);
+  border-radius: 999px;
+  bottom: calc(12px + env(safe-area-inset-bottom));
+  box-shadow: 0 18px 42px rgba(78, 95, 90, 0.2);
   display: grid;
-  gap: 4px;
+  gap: 6px;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  left: 0;
-  padding: 8px 10px calc(8px + env(safe-area-inset-bottom));
+  left: 50%;
+  max-width: 360px;
+  padding: 8px;
   position: fixed;
-  right: 0;
+  transform: translateX(-50%);
+  width: calc(100vw - 32px);
   z-index: 25;
 }
 
@@ -191,24 +194,15 @@
   border-radius: 8px;
   color: var(--muted);
   cursor: pointer;
-  flex-direction: column;
+  flex-direction: row;
   font: inherit;
-  font-size: 11px;
-  font-weight: 750;
-  gap: 4px;
+  height: 44px;
   justify-content: center;
-  line-height: 1.08;
-  min-height: 56px;
-  padding: 6px 4px;
-  text-align: center;
+  padding: 0;
 }
 
 .bottom-nav-item svg {
   flex-shrink: 0;
-}
-
-.bottom-nav-item span {
-  overflow-wrap: anywhere;
 }
 
 .bottom-nav-item.active {
@@ -939,15 +933,15 @@ select:focus-visible {
   }
 
   .bottom-nav {
-    gap: 2px;
-    padding-left: 6px;
-    padding-right: 6px;
+    bottom: calc(10px + env(safe-area-inset-bottom));
+    gap: 4px;
+    max-width: 320px;
+    padding: 7px;
+    width: calc(100vw - 28px);
   }
 
   .bottom-nav-item {
-    font-size: 10px;
-    min-height: 52px;
-    padding: 5px 2px;
+    height: 40px;
   }
 
   .profile-button {
