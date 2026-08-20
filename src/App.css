@@ -206,7 +206,8 @@
 }
 
 .bottom-nav-item.active {
-  background: rgba(132, 165, 157, 0.18);
+  background: #f5cac3;
+  border-radius: 999px;
   color: var(--ink);
 }
 
