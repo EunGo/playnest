@@ -1,6 +1,7 @@
 .app-shell {
   color: var(--ink);
   min-height: 100svh;
+  padding-bottom: calc(86px + env(safe-area-inset-bottom));
 }
 
 .app-header {
@@ -27,6 +28,8 @@
 
 .brand-mark,
 .nav-item,
+.bottom-nav-item,
+.profile-button,
 .primary-button,
 .secondary-button,
 .create-button,
@@ -149,6 +152,70 @@
   z-index: 1;
 }
 
+.profile-button {
+  background: #ffffff;
+  border: 1px solid rgba(132, 165, 157, 0.34);
+  border-radius: 50%;
+  color: var(--ink);
+  cursor: pointer;
+  height: 38px;
+  justify-content: center;
+  width: 38px;
+}
+
+.profile-button.active {
+  background: #84a59d;
+  border-color: #84a59d;
+  color: #ffffff;
+}
+
+.bottom-nav {
+  align-items: stretch;
+  background: #ffffff;
+  border-top: 1px solid var(--line);
+  bottom: 0;
+  box-shadow: 0 -10px 24px rgba(78, 95, 90, 0.1);
+  display: grid;
+  gap: 4px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  left: 0;
+  padding: 8px 10px calc(8px + env(safe-area-inset-bottom));
+  position: fixed;
+  right: 0;
+  z-index: 25;
+}
+
+.bottom-nav-item {
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  color: var(--muted);
+  cursor: pointer;
+  flex-direction: column;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 750;
+  gap: 4px;
+  justify-content: center;
+  line-height: 1.08;
+  min-height: 56px;
+  padding: 6px 4px;
+  text-align: center;
+}
+
+.bottom-nav-item svg {
+  flex-shrink: 0;
+}
+
+.bottom-nav-item span {
+  overflow-wrap: anywhere;
+}
+
+.bottom-nav-item.active {
+  background: rgba(132, 165, 157, 0.18);
+  color: var(--ink);
+}
+
 .menu-popover {
   background: var(--panel);
   border: 1px solid var(--line);
@@ -165,6 +232,8 @@
 }
 
 .nav-item,
+.bottom-nav-item,
+.profile-button,
 .primary-button,
 .secondary-button,
 .icon-button,
@@ -863,6 +932,27 @@ select:focus-visible {
   .main-area,
   .app-header {
     padding: 16px;
+  }
+
+  .app-shell {
+    padding-bottom: calc(80px + env(safe-area-inset-bottom));
+  }
+
+  .bottom-nav {
+    gap: 2px;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .bottom-nav-item {
+    font-size: 10px;
+    min-height: 52px;
+    padding: 5px 2px;
+  }
+
+  .profile-button {
+    height: 34px;
+    width: 34px;
   }
 
   .menu-popover {

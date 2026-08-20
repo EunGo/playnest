@@ -11,16 +11,13 @@ import {
   Home,
   Languages,
   MapPin,
-  Menu,
   MessageCircle,
   Plus,
   Search,
-  Settings,
   ShieldCheck,
-  Sparkles,
   Star,
   Trees,
-  X,
+  UserRound,
 } from 'lucide-react'
 import './App.css'
 
@@ -134,7 +131,6 @@ const filters = ['Under 1 km', '0-7 years', 'English', 'Indoor', 'Stroller-frien
 
 function App() {
   const [activeSection, setActiveSection] = useState<Section>('discover')
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [selectedLanguage, setSelectedLanguage] = useState('English')
   const [showRegisteredOnly, setShowRegisteredOnly] = useState(false)
   const shouldShowSearch = activeSection === 'discover' || activeSection === 'community'
@@ -153,7 +149,6 @@ function App() {
     { id: 'match', label: 'Matching', icon: HeartHandshake },
     { id: 'care', label: 'Nannies & lessons', icon: ShieldCheck },
     { id: 'community', label: 'Forum & chat', icon: MessageCircle },
-    { id: 'settings', label: 'Settings', icon: Settings },
   ] as const
 
   return (
@@ -170,52 +165,14 @@ function App() {
           </div>
         </div>
 
-        <div className="menu-area">
-          <button
-            aria-controls="primary-menu"
-            aria-expanded={isMenuOpen}
-            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-            className="menu-toggle"
-            onClick={() => setIsMenuOpen((open) => !open)}
-            type="button"
-          >
-            {isMenuOpen ? <X size={22} aria-hidden="true" /> : <Menu size={22} aria-hidden="true" />}
-          </button>
-
-          {isMenuOpen && (
-            <div className="menu-popover" id="primary-menu">
-              <nav className="nav-list" aria-label="Primary navigation">
-                {navigation.map((item) => {
-                  const Icon = item.icon
-                  return (
-                    <button
-                      className={activeSection === item.id ? 'nav-item active' : 'nav-item'}
-                      key={item.id}
-                      onClick={() => {
-                        setActiveSection(item.id)
-                        setIsMenuOpen(false)
-                      }}
-                      type="button"
-                    >
-                      <Icon size={18} aria-hidden="true" />
-                      <span>{item.label}</span>
-                    </button>
-                  )
-                })}
-              </nav>
-
-              <section className="signup-panel" aria-label="Sign up">
-                <p className="eyebrow">Sign up</p>
-                <h2>Create a family profile</h2>
-                <p>Add your child age, languages, availability, and comfort preferences to unlock safer matches.</p>
-                <button className="primary-button" type="button">
-                  <Sparkles size={18} aria-hidden="true" />
-                  Start profile
-                </button>
-              </section>
-            </div>
-          )}
-        </div>
+        <button
+          aria-label="Open profile settings"
+          className={activeSection === 'settings' ? 'profile-button active' : 'profile-button'}
+          onClick={() => setActiveSection('settings')}
+          type="button"
+        >
+          <UserRound size={20} aria-hidden="true" />
+        </button>
       </header>
 
       <section className="main-area">
@@ -256,6 +213,23 @@ function App() {
 
         {activeSection === 'settings' && <SettingsSection selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} />}
       </section>
+
+      <nav className="bottom-nav" aria-label="Primary navigation">
+        {navigation.map((item) => {
+          const Icon = item.icon
+          return (
+            <button
+              className={activeSection === item.id ? 'bottom-nav-item active' : 'bottom-nav-item'}
+              key={item.id}
+              onClick={() => setActiveSection(item.id)}
+              type="button"
+            >
+              <Icon size={20} aria-hidden="true" />
+              <span>{item.label}</span>
+            </button>
+          )
+        })}
+      </nav>
     </main>
   )
 }
